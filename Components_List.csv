@@ -1,0 +1,15 @@
+Components Required:
+
+• ESP32 DevKit V1 – 1
+• DHT22 Temperature and Humidity Sensor – 1
+• BMP180 Atmospheric Pressure Sensor – 1
+• SSD1306 OLED Display (128×64, I2C) – 1
+• LDR (Light Dependent Resistor) Sensor Module – 1
+• Green LED – 1
+• Yellow LED – 1
+• Red LED – 1
+• Active Buzzer – 1
+• 220 Ω Resistors – 3
+• Breadboard – 1
+• Jumper Wires – As Required
+• USB Cable (for programming and powering the ESP32) – 1
