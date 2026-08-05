@@ -1,450 +1,230 @@
-\# 🌦️ Advanced Weather \& Environmental Monitoring System using ESP32
+# 🌦️ Advanced Weather & Environmental Monitoring System using ESP32
 
+## 📌 Project Overview
 
-
-\## 📌 Project Overview
-
-
-
-The \*\*Advanced Weather \& Environmental Monitoring System\*\* is an ESP32-based embedded systems project designed to monitor environmental conditions in real time. The system continuously measures \*\*temperature\*\*, \*\*humidity\*\*, and \*\*ambient light intensity\*\*, then classifies the surrounding environment into \*\*Normal\*\*, \*\*Moderate Warning\*\*, or \*\*High Temperature Alert\*\* conditions.
-
-
+The **Advanced Weather & Environmental Monitoring System** is an ESP32-based embedded systems project designed to monitor environmental conditions in real time. The system continuously measures **temperature**, **humidity**, and **ambient light intensity**, then classifies the surrounding environment into **Normal**, **Moderate Warning**, or **High Temperature Alert** conditions.
 
 Sensor readings and system status are displayed on the Serial Monitor, while LEDs and a buzzer provide visual and audible alerts whenever abnormal environmental conditions are detected.
 
-
-
 This project demonstrates real-time environmental monitoring using multiple sensors, making it suitable for smart home, industrial, and educational IoT applications.
 
+---
 
-
-\---
-
-
-
-\# 🚀 Project Status
-
-
+# 🚀 Project Status
 
 ✅ Completed
 
+---
 
+# ✨ Features
 
-\---
+- 🌡️ Real-Time Temperature Monitoring
+- 💧 Humidity Monitoring
+- ☀️ Ambient Light Detection using LDR
+- 🚦 Environmental Status Classification
+- 🟢 Normal Weather Indication
+- 🟡 Moderate Temperature Warning
+- 🔴 High Temperature Alert
+- 🔔 Buzzer Alert System
+- 📟 Serial Monitor Output
+- ⚡ ESP32-Based Embedded System
 
+---
 
+# ⭐ Technical Highlights
 
-\# ✨ Features
+- Multiple Sensor Integration
+- Analog and Digital Signal Processing
+- Real-Time Environmental Monitoring
+- Embedded C/C++ Programming
+- Sensor Data Analysis
+- Alert-Based Decision Making
+- ESP32 GPIO Programming
 
+---
 
-
-\- 🌡️ Real-Time Temperature Monitoring
-
-\- 💧 Humidity Monitoring
-
-\- ☀️ Ambient Light Detection using LDR
-
-\- 🚦 Environmental Status Classification
-
-\- 🟢 Normal Weather Indication
-
-\- 🟡 Moderate Temperature Warning
-
-\- 🔴 High Temperature Alert
-
-\- 🔔 Buzzer Alert System
-
-\- 📟 Serial Monitor Output
-
-\- ⚡ ESP32-Based Embedded System
-
-
-
-\---
-
-
-
-\# ⭐ Technical Highlights
-
-
-
-\- Multiple Sensor Integration
-
-\- Analog and Digital Signal Processing
-
-\- Real-Time Environmental Monitoring
-
-\- Embedded C/C++ Programming
-
-\- Sensor Data Analysis
-
-\- Alert-Based Decision Making
-
-\- ESP32 GPIO Programming
-
-
-
-\---
-
-
-
-\# 🛠️ Components Used
-
-
+# 🛠️ Components Used
 
 | Component | Quantity |
-
 |-----------|---------:|
-
 | ESP32 DevKit V1 | 1 |
-
-| DHT22 Temperature \& Humidity Sensor | 1 |
-
+| DHT22 Temperature & Humidity Sensor | 1 |
 | LDR (Photoresistor) | 1 |
-
 | Green LED | 1 |
-
 | Yellow LED | 1 |
-
 | Red LED | 1 |
-
 | Active Buzzer | 1 |
-
 | 220Ω Resistors | 3 |
-
 | Breadboard | 1 |
-
 | Jumper Wires | As Required |
 
+---
 
-
-\---
-
-
-
-\# 🔌 Circuit Connections
-
-
+# 🔌 Circuit Connections
 
 The project consists of the following hardware modules:
 
-
-
-\- ESP32 DevKit V1
-
-\- DHT22 Temperature \& Humidity Sensor
-
-\- LDR Sensor
-
-\- Green LED
-
-\- Yellow LED
-
-\- Red LED
-
-\- Active Buzzer
-
-
+- ESP32 DevKit V1
+- DHT22 Temperature & Humidity Sensor
+- LDR Sensor
+- Green LED
+- Yellow LED
+- Red LED
+- Active Buzzer
 
 The complete wiring connections are provided in the schematic diagram included in this repository.
 
+---
 
+# 🏗️ System Architecture
 
-\---
+The following diagram illustrates the overall architecture and data flow of the Advanced Weather & Environmental Monitoring System. The ESP32 continuously collects environmental data from the DHT22 temperature and humidity sensor together with the LDR. Based on the measured values, the controller classifies the environment and activates the appropriate LED and buzzer alerts while displaying the readings through the Serial Monitor.
 
+![System Architecture](System_Architecture.png)
 
+### Architecture Explanation
 
-
-
-\### Architecture Explanation
-
-
-
-\- 🌡️ \*\*DHT22 Sensor\*\* measures ambient temperature and humidity.
-
-\- ☀️ \*\*LDR\*\* monitors the surrounding light intensity.
-
-\- ⚡ \*\*ESP32\*\* processes all sensor data and determines the environmental condition.
-
-\- 🟢 \*\*Green LED\*\* indicates normal environmental conditions.
-
-\- 🟡 \*\*Yellow LED\*\* indicates a moderate temperature warning.
-
-\- 🔴 \*\*Red LED\*\* indicates a high temperature alert.
-
-\- 🔔 \*\*Buzzer\*\* provides an audible warning during abnormal conditions.
-
-\- 📟 \*\*Serial Monitor\*\* displays live environmental readings and system status.
-
-
+- 🌡️ **DHT22 Sensor** measures ambient temperature and humidity.
+- ☀️ **LDR** monitors the surrounding light intensity.
+- ⚡ **ESP32** processes all sensor data and determines the environmental condition.
+- 🟢 **Green LED** indicates normal environmental conditions.
+- 🟡 **Yellow LED** indicates a moderate temperature warning.
+- 🔴 **Red LED** indicates a high temperature alert.
+- 🔔 **Buzzer** provides an audible warning during abnormal conditions.
+- 📟 **Serial Monitor** displays live environmental readings and system status.
 
 The ESP32 continuously monitors the environment, processes sensor readings, and activates the appropriate output devices based on predefined threshold values.
 
+---
 
+# ⚙️ Working Principle
 
-\---
+1. ESP32 continuously reads temperature and humidity from the DHT22 sensor.
+2. The LDR measures the ambient light intensity.
+3. Sensor values are displayed on the Serial Monitor.
+4. The controller compares the measured values with predefined thresholds.
+5. Under normal conditions, the Green LED remains ON.
+6. During moderate temperature conditions, the Yellow LED is activated.
+7. During high temperature conditions, the Red LED and buzzer are activated to alert the user.
+8. The monitoring process repeats continuously in real time.
 
+---
 
+# 📷 Project Gallery
 
-\# ⚙️ Working Principle
-
-
-
-1\. ESP32 continuously reads temperature and humidity from the DHT22 sensor.
-
-2\. The LDR measures the ambient light intensity.
-
-3\. Sensor values are displayed on the Serial Monitor.
-
-4\. The controller compares the measured values with predefined thresholds.
-
-5\. Under normal conditions, the Green LED remains ON.
-
-6\. During moderate temperature conditions, the Yellow LED is activated.
-
-7\. During high temperature conditions, the Red LED and buzzer are activated to alert the user.
-
-8\. The monitoring process repeats continuously in real time.
-
-
-
-\---
-
-
-
-\# 📷 Project Gallery
-
-
-
-\## 🔌 Circuit Design
-
-
+## 🔌 Circuit Design
 
 The complete weather monitoring circuit designed using Wokwi.
 
+![Circuit Design](Circuit_Design.png)
 
+---
 
-!\[Circuit Design](Circuit\_Design.png)
-
-
-
-\---
-
-
-
-\## 📑 Components List
-
-
+## 📑 Components List
 
 The detailed hardware components required for this project.
 
+📄 **Download:**  
+[Components_List.csv](Components_List.csv)
 
+---
 
-📄 \*\*Download:\*\*  
-
-\[Components\_List.csv](Components\_List.csv)
-
-
-
-\---
-
-
-
-\## 💻 Arduino Source Code
-
-
+## 💻 Arduino Source Code
 
 The complete ESP32 Arduino program implementing the weather monitoring system.
 
+📄 **Download:**  
+[ESP32_Weather_Environmental_Monitoring.ino](ESP32_Weather_Environmental_Monitoring.ino)
 
+---
 
-📄 \*\*Download:\*\*  
-
-\[ESP32\_Weather\_Environmental\_Monitoring.ino](ESP32\_Weather\_Environmental\_Monitoring.ino)
-
-
-
-\---
-
-
-
-\## 🌤️ Normal Weather Indicator
-
-
+## 🌤️ Normal Weather Indicator
 
 When the environmental conditions are within the normal operating range, the Green LED remains ON and the Serial Monitor displays the current sensor readings.
 
+![Normal Weather](Normal_Weather_Indicator.png)
 
+---
 
-!\[Normal Weather](Normal\_Weather\_Indicator.png)
-
-
-
-\---
-
-
-
-\## 🟡 Moderate Temperature Warning
-
-
+## 🟡 Moderate Temperature Warning
 
 When the temperature exceeds the normal range, the Yellow LED indicates a moderate warning while the sensor readings continue to be displayed.
 
+![Moderate Warning](Moderate_Temperature_Warning.png)
 
+---
 
-!\[Moderate Warning](Moderate\_Temperature\_Warning.png)
-
-
-
-\---
-
-
-
-\## 🔴 High Temperature Alert
-
-
+## 🔴 High Temperature Alert
 
 When the temperature reaches a critical level, the Red LED and buzzer are activated to notify the user of potentially unsafe environmental conditions.
 
+![High Temperature Alert](High_Temperature_Alert.png)
 
+---
 
-!\[High Temperature Alert](High\_Temperature\_Alert.png)
+# 📚 Technologies Used
 
+- ESP32
+- Embedded C/C++
+- Arduino IDE
+- Wokwi Simulator
+- DHT Sensor Library
+- GPIO Programming
 
+---
 
-\---
-
-
-
-\# 📚 Technologies Used
-
-
-
-\- ESP32
-
-\- Embedded C/C++
-
-\- Arduino IDE
-
-\- Wokwi Simulator
-
-\- DHT Sensor Library
-
-\- GPIO Programming
-
-
-
-\---
-
-
-
-\# 📁 Repository Structure
-
-
+# 📁 Repository Structure
 
 ```text
-
 ESP32-Advanced-Weather-Environmental-Monitoring/
-
 │
-
 ├── README.md
-
-├── ESP32\_Weather\_Environmental\_Monitoring.ino
-
+├── ESP32_Weather_Environmental_Monitoring.ino
 ├── Diagram.json
-
-├── Circuit\_Design.png
-
-├── Components\_List.csv
-
-├── Normal\_Weather\_Indicator.png
-
-├── Moderate\_Temperature\_Warning.png
-
-├── High\_Temperature\_Alert.png
-
-└── System\_Architecture.png
-
+├── Circuit_Design.png
+├── Components_List.csv
+├── Normal_Weather_Indicator.png
+├── Moderate_Temperature_Warning.png
+├── High_Temperature_Alert.png
+└── System_Architecture.png
 ```
 
+---
 
+# 🎯 Applications
 
-\---
+- Smart Weather Monitoring
+- Environmental Monitoring Systems
+- Smart Home Automation
+- Industrial Environment Monitoring
+- Educational IoT Projects
+- Embedded Systems Learning
 
+---
 
+# 🚀 Future Enhancements
 
-\# 🎯 Applications
+- OLED Display Integration
+- Wi-Fi Based Remote Monitoring
+- IoT Cloud Dashboard
+- Mobile Application Integration
+- ThingSpeak Data Logging
+- Firebase Cloud Storage
+- Email & SMS Alerts
+- PCB Design using KiCad
 
+---
 
-
-\- Smart Weather Monitoring
-
-\- Environmental Monitoring Systems
-
-\- Smart Home Automation
-
-\- Industrial Environment Monitoring
-
-\- Educational IoT Projects
-
-\- Embedded Systems Learning
-
-
-
-\---
-
-
-
-\# 🚀 Future Enhancements
-
-
-
-\- OLED Display Integration
-
-\- Wi-Fi Based Remote Monitoring
-
-\- IoT Cloud Dashboard
-
-\- Mobile Application Integration
-
-\- ThingSpeak Data Logging
-
-\- Firebase Cloud Storage
-
-\- Email \& SMS Alerts
-
-\- PCB Design using KiCad
-
-
-
-\---
-
-
-
-\# 📄 License
-
-
+# 📄 License
 
 This project is developed for educational and learning purposes.
 
+---
 
+# 👨‍💻 Author
 
-\---
-
-
-
-\# 👨‍💻 Author
-
-
-
-\*\*Shriram Prasanna K\*\*
-
-
+**Shriram Prasanna K**
 
 B.Tech – Electronics and Communication Engineering (ECE)
 
-
-
 VIT-AP University
-
