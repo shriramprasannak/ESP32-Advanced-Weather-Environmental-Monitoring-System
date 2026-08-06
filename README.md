@@ -78,22 +78,24 @@ The complete wiring connections are provided in the schematic diagram included i
 
 # 🏗️ System Architecture
 
-The following diagram illustrates the overall architecture and data flow of the Advanced Weather & Environmental Monitoring System. The ESP32 continuously collects environmental data from the DHT22 temperature and humidity sensor together with the LDR. Based on the measured values, the controller classifies the environment and activates the appropriate LED and buzzer alerts while displaying the readings through the Serial Monitor.
+The following figure illustrates the overall architecture of the **Advanced Weather & Environmental Monitoring System using ESP32**. The ESP32 acts as the central controller and continuously acquires environmental data from the connected sensors. Based on the measured values, it processes the sensor data, determines the environmental condition, updates the status indicators, and provides visual and audible alerts.
 
 ![System Architecture](System_Architecture.png)
 
-### Architecture Explanation
+### Architecture Description
 
-- 🌡️ **DHT22 Sensor** measures ambient temperature and humidity.
-- ☀️ **LDR** monitors the surrounding light intensity.
-- ⚡ **ESP32** processes all sensor data and determines the environmental condition.
-- 🟢 **Green LED** indicates normal environmental conditions.
-- 🟡 **Yellow LED** indicates a moderate temperature warning.
-- 🔴 **Red LED** indicates a high temperature alert.
-- 🔔 **Buzzer** provides an audible warning during abnormal conditions.
-- 📟 **Serial Monitor** displays live environmental readings and system status.
+- **ESP32 DevKit V1** serves as the central processing unit of the system.
+- **DHT22 Sensor** measures the ambient temperature and humidity.
+- **BMP180 Sensor** measures atmospheric pressure.
+- **LDR Sensor Module** measures the surrounding light intensity.
+- The ESP32 processes all incoming sensor data and compares it with predefined threshold values.
+- The **SSD1306 OLED Display** presents real-time sensor readings to the user.
+- The **Green LED** indicates normal environmental conditions.
+- The **Yellow LED** indicates a moderate temperature warning.
+- The **Red LED** indicates a high temperature alert.
+- The **Active Buzzer** provides an audible alert during critical environmental conditions.
 
-The ESP32 continuously monitors the environment, processes sensor readings, and activates the appropriate output devices based on predefined threshold values.
+The system continuously monitors environmental parameters, updates the display with live sensor data, and activates the appropriate indicators to provide real-time environmental monitoring and alert notifications.
 
 ---
 
