@@ -74,7 +74,24 @@ The project consists of the following hardware modules:
 
 The complete wiring connections are provided in the schematic diagram included in this repository.
 
----
+# 📐 Schematic Diagram
+
+The schematic diagram illustrates the complete electrical connections of the **Advanced Weather & Environmental Monitoring System using ESP32**. It shows how the ESP32 interfaces with the DHT22 temperature and humidity sensor, BMP180 pressure sensor, LDR sensor module, SSD1306 OLED display, status LEDs, and active buzzer. The schematic serves as the hardware blueprint of the project and provides a clear representation of all power, ground, and signal connections.
+
+![Schematic Diagram](Schematic_Diagram.png)
+
+### Schematic Description
+
+- **ESP32 DevKit V1** acts as the main controller for the entire system.
+- **DHT22 Sensor** is connected to measure temperature and humidity.
+- **BMP180 Sensor** communicates with the ESP32 through the I²C interface for atmospheric pressure measurement.
+- **SSD1306 OLED Display** is connected through the I²C bus to display live environmental data.
+- **LDR Sensor Module** measures the surrounding light intensity using an analog input.
+- **Green, Yellow, and Red LEDs** provide visual indication of the current environmental condition.
+- **Active Buzzer** generates an audible alarm during high-temperature conditions.
+- All components share a common **3.3V power supply** and **GND** connections provided by the ESP32.
+
+The schematic provides a complete overview of the hardware design and serves as a reference for assembling and understanding the overall circuit implementation.
 
 # 🏗️ System Architecture
 
